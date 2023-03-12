@@ -9,7 +9,7 @@
 # Usage
 
 ``` yaml
-- uses: supplient/Actions_BlogBuilder@main
+- uses: supplient/Actions_HTMLPDFBlogBuilder@main
   with:
     # required 源目录，会处理该目录下的文件。注意index.md也会生成在该目录中
     root_dir: ./md
@@ -52,7 +52,7 @@ jobs:
           path: "${{ github.workspace }}"
 
       - name: Blog Builder
-        uses: ./.github/actions/blogbuilder
+        uses: supplient/Actions_HTMLPDFBlogBuilder@main
         with:
           root_dir: "/github/workspace"
         
@@ -79,7 +79,3 @@ extra
 ```
 
 如果启用github page，并将其源目录设为gh-page分支的根目录，则会因为gh-pages的变动而进一步触发github自动设立的pages-build-depolyment Workflow，从而更新github page。
-
-
-# Limitations
-* 目前不支持文件名里带空格
