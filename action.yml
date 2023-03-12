@@ -1,0 +1,11 @@
+name: "Blog Builder"
+description: "Build Blog from html and pdf."
+inputs:
+  root_dir:
+    description: "Path to the root directory"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.root_dir }}
