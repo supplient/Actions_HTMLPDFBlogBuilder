@@ -79,3 +79,7 @@ extra
 ```
 
 如果启用github page，并将其源目录设为gh-page分支的根目录，则会因为gh-pages的变动而进一步触发github自动设立的pages-build-depolyment Workflow，从而更新github page。
+
+# TODO
+我希望如果一个文件只有`.md`而没有`.html`时，我可以设置是否有生成指向它的`.html`文件的索引。
+从而可以配合`jekyll`来使用，让简单的markdown文件直接由Jekyll来处理。
